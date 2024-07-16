@@ -5,7 +5,7 @@ class Facility
     @name = name
     @address = address
     @phone = phone
-    @services = []
+    @services = services
   end
 
   def add_services(service)
@@ -35,5 +35,18 @@ class Facility
     if registrant.has_license?
       registrant.renew_license
     end
+  end
+
+  def ny_dmv_office_locations
+    [
+      {name: 'DMV huntington' phone: '7184774820' address: 'street_address_line_1' }
+      [name: 'DMV Millbrook' phone: '8456774080' address: '15 Merritt anvenue']
+    ]
+  end
+
+  def mo_dmv_office_locations
+    [
+      {name: }
+    ]
   end
 end
