@@ -4,7 +4,7 @@ class Registrant
     def initialize(name, age)
         @name = name
         @age = age
-        @permit = false
+        @permit = permit
         @license_data = {written: false, license: false, renewed: false}
     end
 
