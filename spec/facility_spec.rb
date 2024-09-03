@@ -19,6 +19,13 @@ RSpec.describe Facility do
 
   describe '#add service' do
     it 'can add available services' do
+      expect(@facility_1.service).to eq([])
+      @facility_1.add_service('New Drivers License')
+      @facility_1.add_service('Renew Drivers License')
+      @facility_1.add_service('Vehicle Registration')
+      expect(@facility_2.services).to eq(['New Drivers License', 'Renew Drivers License', 'Vehicle Registration'])
+
+
       expect(@facility_2.services).to eq([])
       @facility_2.add_service('New Drivers License')
       @facility_2.add_service('Renew Drivers License')
@@ -27,7 +34,5 @@ RSpec.describe Facility do
     end
   end
 
-  describe '#vehicle objects' do
-    it 'can interact with vehicle objects' do
-
+  describe '#'
 end
