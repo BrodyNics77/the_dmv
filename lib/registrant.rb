@@ -4,5 +4,10 @@ class Registrant
     def initialize(name, age)
         @name = name
         @age = age
-        @permit =
+        @permit = false
     end
+
+    def earn_permit
+        @permit = true
+    end
+end
