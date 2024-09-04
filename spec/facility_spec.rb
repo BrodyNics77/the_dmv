@@ -63,6 +63,11 @@ RSpec.describe Facility do
     end
   end
 
+  describe '#administer_road_test' do
+    it 'can administer road test to eligible registrants' do
+      expect
+  
+
 
 
 
