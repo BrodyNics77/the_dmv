@@ -6,3 +6,5 @@ Rspec.describe Vehicle_factory do
     before(:each) do
         @factory = VehicleFactory.new
         @wa_ev_registrations = DmvDataService.new.wa_ev_registrations
+    end
+end
