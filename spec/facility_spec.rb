@@ -44,6 +44,26 @@ RSpec.describe Facility do
     end
   end
 
+  describe '#register_vehicle' do
+    it 'registers vehicle based on type' do
+      vehicle1 = double("Vehicle", type: :antique)
+      vehicle2 = double("Vehicle", type: :ev)
+      vehicle3 = double("Vehicle", type: :regular)
+
+      expect(vehicle1).to receive(:register).with(:antique, 25)
+      expect(vehicle2).to receive(:register).with(:ev, 200)
+      expect(vehicle3).to receive(:register).with(:regular, 100)
+
+      @facility_1.register_vehicle(vehicle1)
+      @facility_1.register_vehicle(vehicle2)
+      @facility_1.register_vehicle(vehicle3)
+      @facility_2.register_vehicle(vehicle1)
+      @facility_2.register_vehicle(vehicle2)
+      @facility_2.register_vehicle(vehicle3)
+    end
+  end
+
+
 
 
 
