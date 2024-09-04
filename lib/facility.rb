@@ -26,5 +26,8 @@ class Facility
     end
   end
 
-
+  def administer_road_test(registerant)
+    if @registrant.has_permit? && registerant.age >= 16
+      then @registerant.pass_written_test
+    end
 end

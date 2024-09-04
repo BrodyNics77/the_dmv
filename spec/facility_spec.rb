@@ -63,16 +63,21 @@ RSpec.describe Facility do
     end
   end
 
-  describe '#administer_road_test' do
-    it 'can administer road test to eligible registrants' do
-      expect
+  describe '#administer_written_test' do
+    it 'can administer written test to eligible registrants' do
+      expect(registrant).to receive(:pass_written_test)
+
+      @facility_1.administer_road_test(registerant)
+      @facility_2.administer_road_test(registerant)
+    end
+  end
   
+  describe '#administer_license_test' do
+    it 'can administer license test to eligible registrants' do 
+      expect(registrant).to receive(:renew_license)
 
-
-
-
-
-# describe '#register_vehicle' do
- #   it 'registers vehicles based on type' do
-  #    facility_1.register_vehicle(cruz)
+      @facility_1.renew_license(registerant)
+      @facility_2.renew_license(registerant)
+    end
+  end
 end
